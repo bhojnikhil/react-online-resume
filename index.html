@@ -1,0 +1,206 @@
+<html>
+<head>
+  <title>Resume | Nikhil Bhoj</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Nikhil Bhoj",
+      subtext: "Software Engineer, Dallas, Texas",
+      jobStatus: "Graduated from Texas State University, Previously Software Engineer at Accenture, Larsen & Toubro",
+      twitterURL: 'https://twitter.com/bhojnikhil',
+      instaURL: 'https://www.instagram.com/bhojnikhil/',
+      githubURL: 'https://github.com/bhojnikhil',
+      linkedinURL: 'https://www.linkedin.com/in/nikhil-bhoj',
+      resumeURL: 'https://www.dropbox.com/s/wullbabftramec5/Nikhil_%20Resume.pdf?dl=0'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              twitterURL={this.props.profileData.twitterURL}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I'm currently located in Dallas, Texas. Recently graduated from Texas State University.</p>
+                  <p className="intro-p">I enjoy building web applications. I am experienced developing, tweaking, refreshing Full-Stack scale web applications.</p>
+                  <span className="intro-p job-pls">Looking for Full-Time opportunities all over USA!</span>
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: </strong>
+                    <span>C++, Python, Java, JavaScript (ES6), HTML5, CSS3</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries Frameworks: </strong>
+                    <span>React, Node, Flask, Angular, Express, Bootstrap</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Databases: </strong>
+                    <span>MySQL, PostgreSQL </span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: </strong>
+                    <span>Git & Github, Command Line, Postman</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.txstate.edu/" target="_blank">Texas State University</a></div>
+                  <div className="college"><a href="http://www.cs.txstate.edu/" target="_blank">M.S in Computer Science</a></div>
+                  <div className="grad-date">Graduation: May 2019</div>
+                  <br/>
+                  <div className="university"><a  target="_blank">Sri Jayachamarajendra College of Engineering</a></div>
+                  <div className="college"><a  target="_blank">Masters in Computer Applications</a></div>
+                  <div className="grad-date">Graduation: June 2015</div>
+                  <br/>
+                  <div className="university"><a  target="_blank">University of Mysore</a></div>
+                  <div className="college"><a  target="_blank">Bachelors in Computer Applications</a></div>
+                  <div className="grad-date">Graduation: June 2012</div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.cs.txstate.edu/" target="_blank">Texas State University</a>
+                      <div className="duration">January 2018 - May 2109</div>
+                    </div>
+                    <div className="title">Graduate Instructional Assistant</div>
+                    <ul className="description">
+                      <li>Tutoring and mentored undergraduate students in Data Structures and algorithms in C++ and Java</li>
+                      <li>Undertook entire lab curriculum which included teaching, reviewing and grading assignments in C++</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.accenture.com/" target="_blank">Accenture</a>
+                      <div className="duration">July 2015 - July 2017</div>
+                    </div>
+                    <div className="title">Software Engineer</div>
+                    <ul className="description">
+                      <li>Worked with a team of software engineers to quickly implement solutions to customer issues and make enhancements</li>
+                      <li>Worked on financial web applications built using AngularJS and REST APIs</li>
+                      <li>Worked on various Front-End issues which involved design tweaks as well as adding new components to web apps using HTML, CSS, and Vanilla Javascript as well as ReactJS</li>
+                      <li>Maintained customers relationship management databases in MySQL and PostgreSQL</li>
+                      <li>Web services programming using REST/SOAP</li>
+                      <li>Made use of git for source control, unit testing and followed agile development methodologies</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.lntinfotech.com/" target="_blank">Larsen and toubro</a>
+                      <div className="duration">January 2012 - June 2012</div>
+                    </div>
+                    <div className="title">Software Engineering Intern</div>
+                    <ul className="description">
+                      <li>Worked in the Development of an Android application which employed peer to peer communication within the organization</li>
+                      <li>Built the application using Android studio, made use of XML vocabulary to handle widgets and layouts</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" target="_blank">Face Emotions</a>
+                    <ul className="description">
+                      <li>End to end design using ReactJS, NodeJS, and PostgreSQL</li>
+                      <li>A React web app using Machine learning API's to identify faces in an image and predict human emotions</li>
+                    </ul>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title">Active Collab</div>
+                    <ul className="description">
+                      <li>Peer to Peer Activity Collaboration Mobile app built using React-Native on Django</li>
+                      <li>Reward-based system for collaboration</li>
+                      <li>Uses a recommendation engine to recommend activities based on previous activities/searches</li>
+                    </ul>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" target="_blank">Spring-Boot E Commerce</a>
+                    <ul className="description">
+                      <li>A fully functional E-Commerce Website using Spring-Boot Framework. The website used maven to be built as well as to manage its dependencies</li>
+                      <li>Also includes a complete Web app for the administrator page to add new items in to the inventory</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Click here to Download PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+</html>
