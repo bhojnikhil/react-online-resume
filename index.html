@@ -21,7 +21,7 @@
       instaURL: 'https://www.instagram.com/bhojnikhil/',
       githubURL: 'https://github.com/bhojnikhil',
       linkedinURL: 'https://www.linkedin.com/in/nikhil-bhoj',
-     <!-- resumeURL: 'https://www.dropbox.com/s/wullbabftramec5/Nikhil_%20Resume.pdf?dl=0'-->
+      resumeURL: 'https://www.dropbox.com/s/wullbabftramec5/Nikhil_%20Resume.pdf?dl=0'
     }
 
     var App = React.createClass({
@@ -39,7 +39,7 @@
             />
             <Right
               intro={this.props.profileData.intro}
-              <!--resumeURL={this.props.profileData.resumeURL}-->
+              <resumeURL={this.props.profileData.resumeURL}
             />
           </div>
         );
@@ -188,7 +188,7 @@
                   </div>
                 </div>
               </div>
-              <!--<a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Click here to Download PDF of my full resume</div></a>-->
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Click here to Download PDF of my full resume</div></a>
             </div>
           </div>
         );
